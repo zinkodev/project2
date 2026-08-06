@@ -36,7 +36,7 @@ pipeline {
         stage('scan') {
             steps {
                 withSonarQubeEnv('SonarQube_SVR') {
-                    bat 'mvn sonar:sonar'
+                   bat 'mvn sonar:sonar -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml'
                 }
             }
         }
