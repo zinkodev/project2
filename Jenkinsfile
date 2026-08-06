@@ -28,8 +28,8 @@ pipeline {
 
         stage('build') {
             steps {
-                echo "Start Build"
-               bat "mvn verify -DskipTests"
+                echo "Start Build and Generate JaCoCo Coverage Report"
+               bat "mvn clean verify"
             }
         }
 
