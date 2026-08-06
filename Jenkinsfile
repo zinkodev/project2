@@ -29,7 +29,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Start Build"
-                bat "mvn install -DskipTests"
+               bat "mvn verify -DskipTests"
             }
         }
 
