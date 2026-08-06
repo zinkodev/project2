@@ -24,7 +24,7 @@ public class StudentTest {
     void testConstructorAndGetters() {
         System.out.println("Running: testConstructorAndGetters...");
         assertEquals(1, student.getId());
-        assertEquals("Alice", student.getName());
+        assertEquals("Bob_FAILED", student.getName());
         assertEquals(LocalDate.of(2001, 3, 10), student.getBirthday());
         assertEquals(friend, student.getFriend());
         System.out.println("Success: Student object and getters verified.");
