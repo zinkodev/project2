@@ -35,17 +35,16 @@ pipeline {
 
         stage('scan') {
             steps {
-                echo "Start Scan"
                 withSonarQubeEnv('SonarQube_SVR') {
-                    bat "mvn sonar:sonar"
+                    bat 'mvn sonar:sonar'
                 }
             }
         }
-    }
+    } // End of Stages
 
     post {
         always {
             echo "Pipeline completed. Check SonarQube dashboard for analysis results."
         }
     }
-}
+} // End of Pipeline
