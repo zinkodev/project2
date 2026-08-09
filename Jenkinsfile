@@ -29,8 +29,8 @@ pipeline {
         stage('build') {
             steps {
                 echo "Start Build and Generate JaCoCo Coverage Report"
-               bat "mvn clean verify"
-               //bat "mvn clean execute_invalid_task"
+               //bat "mvn clean verify"
+               bat "mvn clean execute_invalid_task"
             }
         }
 
